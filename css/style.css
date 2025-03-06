@@ -93,7 +93,7 @@ header{
     display: flex;
     position: fixed;
     bottom: 2rem;
-    left: 19rem;
+    left: 19.5rem;
 }
 
 .logo-wsp{
@@ -137,7 +137,7 @@ header{
 
 
 .acerca-de {
-    padding: 3rem 1.5rem;
+    padding: 3rem 1.5rem 1rem 1.5rem;
     text-align: center;
 }
 
@@ -174,7 +174,7 @@ header{
 
 .ubicacion p {
     font-family: 'AGrill_font1', sans-serif;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     color: #201e1e;
     max-width: 600px;
     margin: 0 auto;
@@ -182,16 +182,25 @@ header{
 }
 
 .ubi{
-    max-width: 2rem;
- display: flex;
+    max-width: 4rem;
+    display: flex;
     margin: 1rem auto ;
 }
 
 .p-ubi{
     font-family: 'AGrill_font1', sans-serif;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     color: #201e1e;
     text-align: center;
+    margin: 1rem;
+}
+
+.menu-h2{
+    font-family: 'AGrill_font1', sans-serif;
+    font-size: 2rem;
+    color: #201e1e;
+    text-align: center;
+    margin: 1rem ;
 }
 
 .menu{
@@ -212,7 +221,7 @@ header{
 }
 
 .menu-img{
-    max-width: 20rem;
+    max-width: 25rem;
     border-radius: 10px;
     
 }
