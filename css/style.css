@@ -71,11 +71,14 @@ header{
         padding: 2rem;
         bottom: 0;
         box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .5);
+        z-index: 9999
+
     }
 
     .nav.visible{
         opacity: 1;
         visibility: visible;
+        
     }
 
     .nav-list{
@@ -86,11 +89,112 @@ header{
 
 /* Main */
 
+.wsp{
+    display: flex;
+    position: fixed;
+    bottom: 2rem;
+    left: 14rem;
+}
+
+.logo-wsp{
+    max-width: 2.5rem;
+}
+
 .logo-main{
     display: flex;
     max-width: 15rem;
 
     margin: 3rem auto ;
+}
+
+.carrusel {
+    width: 100%;
+    height: calc(100vh + 1rem); /* Toda la pantalla + 32rem */
+    margin-top: 0; /* Elimina cualquier margen superior */
+    padding-top: 0; /* Asegura que no haya espacio extra */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+#carouselExampleInterval {
+    width: 100%;
+    height: 100%;
+}
+
+.carousel-inner,
+.carousel-item {
+    width: 100%;
+    height: 100%;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ajusta la imagen para que cubra todo sin deformarse */
+    object-position: center; /* Centra la imagen */
+}
+
+
+.acerca-de {
+    background-color: #f8f9fa; /* Fondo gris claro */
+    padding: 3rem 1.5rem;
+    text-align: center;
+}
+
+.acerca-de .container {
+    max-width: 900px;
+    margin: auto;
+}
+
+.acerca-de h2 {
+    font-family: 'AGrill_font2';
+    font-size: 2rem;
+    color: #201e1e;
+    margin-bottom: 1rem;
+}
+
+.acerca-de p {
+    font-family: 'AGrill_font1';
+    font-size: 1.4rem;
+    color: #201e1e;
+    line-height: 1.6rem;
+}
+
+.ubicacion {
+    background-color: #f8f9fa; /* Color de fondo similar a "Acerca de Nosotros" */
+    padding: 3rem 1rem;
+    text-align: center;
+}
+
+.ubicacion h3 {
+    font-family: 'AGrill_font2', sans-serif;
+    font-size: 2rem;
+    color: #201e1e;
+    margin-bottom: 1rem;
+}
+
+.ubicacion p {
+    font-family: 'AGrill_font1', sans-serif;
+    font-size: 1.2rem;
+    color: #201e1e;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.5;
+}
+
+.ubi{
+    max-width: 2rem;
+ display: flex;
+    margin: 1rem auto ;
+}
+
+.p-ubi{
+    font-family: 'AGrill_font1', sans-serif;
+    font-size: 1.2rem;
+    color: #201e1e;
+    text-align: center;
 }
 
 /* footer */
