@@ -93,7 +93,7 @@ header{
     display: flex;
     position: fixed;
     bottom: 2rem;
-    left: 17rem;
+    left: 16rem;
 }
 
 .logo-wsp{
@@ -103,7 +103,6 @@ header{
 .logo-main{
     display: flex;
     max-width: 15rem;
-
     margin: 3rem auto ;
 }
 
@@ -197,38 +196,28 @@ header{
     text-align: center;
 }
 
-.menu {
+.menu{
     display: flex;
-    justify-content: center; /* Centra el contenido horizontalmente */
-    align-items: center; /* Centra el contenido verticalmente */
-    width: 100%;
-    min-height: 100vh; /* Asegura que cubra la pantalla */
+    justify-content: center
 }
 
-.menu-sub {
-    display: flex;
-    justify-content: center; /* Centra los elementos horizontalmente */
-    align-items: center; /* Centra verticalmente */
-    gap: 2rem; /* Espaciado entre los elementos */
-    flex-wrap: wrap; /* Permite que los elementos se ajusten en varias líneas si es necesario */
+.menu-sub{
+
 }
 
-.menu-div {
-    display: flex;
-    flex-direction: column; /* Organiza la imagen y el texto en columna */
-    align-items: center; /* Centra los elementos dentro de cada .menu-div */
-    text-align: center; /* Asegura que el texto esté centrado */
-    width: 200px; /* Puedes ajustar el ancho según necesites */
+.menu-div{
+
 }
 
-.menu-img {
-    width: 100%; /* Para que las imágenes se ajusten al tamaño del div */
-    max-width: 600px; /* Ajusta el tamaño máximo de la imagen */
-    border-radius: 10px; /* Bordes redondeados opcionales */
+.menu-p{
+    text-align: center;
 }
 
-
-
+.menu-img{
+    max-width: 17rem;
+    border-radius: 10px;
+    
+}
 /* footer */
 
 .footer{
