@@ -93,7 +93,7 @@ header{
     display: flex;
     position: fixed;
     bottom: 2rem;
-    left: 16rem;
+    left: 19rem;
 }
 
 .logo-wsp{
@@ -137,7 +137,6 @@ header{
 
 
 .acerca-de {
-    background-color: #f8f9fa; /* Fondo gris claro */
     padding: 3rem 1.5rem;
     text-align: center;
 }
@@ -162,7 +161,6 @@ header{
 }
 
 .ubicacion {
-    background-color: #f8f9fa; /* Color de fondo similar a "Acerca de Nosotros" */
     padding: 3rem 1rem;
     text-align: center;
 }
@@ -214,7 +212,7 @@ header{
 }
 
 .menu-img{
-    max-width: 17rem;
+    max-width: 20rem;
     border-radius: 10px;
     
 }
