@@ -1,4 +1,4 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -8,12 +8,13 @@
     font-family: 'AGrill_font1';
     src: url('../fonts/UPCLI.TTF');
 }
+
 @font-face {
     font-family: 'AGrill_font2';
     src: url('../fonts/BAIKAL.ttf');
 }
 
-header{
+header {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -21,17 +22,17 @@ header{
     background-color: #201e1e;
 }
 
-.logo{
+.logo {
     max-width: 5rem;
 }
 
-.nav-list{
+.nav-list {
     list-style-type: none;
     display: flex;
     gap: 1.6rem;
 }
 
-.nav-list li a{
+.nav-list li a {
     text-decoration: none;
     color: white;
     font-family: 'AGrill_font1';
@@ -46,8 +47,9 @@ header{
 }
 
 @media screen and (max-width:550px) {
+
     .abrir-menu,
-    .cerrar-menu{
+    .cerrar-menu {
         display: block;
         border: 0;
         font-size: 1.2rem;
@@ -56,7 +58,7 @@ header{
         cursor: pointer;
     }
 
-    .nav{
+    .nav {
         opacity: 0;
         visibility: hidden;
 
@@ -72,16 +74,15 @@ header{
         bottom: 0;
         box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .5);
         z-index: 9999
-
     }
 
-    .nav.visible{
+    .nav.visible {
         opacity: 1;
         visibility: visible;
-        
+
     }
 
-    .nav-list{
+    .nav-list {
         flex-direction: column;
         align-items: end;
     }
@@ -89,28 +90,31 @@ header{
 
 /* Main */
 
-.wsp{
+.wsp {
     display: flex;
     position: fixed;
     bottom: 2rem;
     left: 19.5rem;
 }
 
-.logo-wsp{
+.logo-wsp {
     max-width: 2.5rem;
 }
 
-.logo-main{
+.logo-main {
     display: flex;
     max-width: 15rem;
-    margin: 3rem auto ;
+    margin: 3rem auto;
 }
 
 .carrusel {
     width: 100%;
-    height: calc(100vh + 1rem); /* Toda la pantalla + 32rem */
-    margin-top: 0; /* Elimina cualquier margen superior */
-    padding-top: 0; /* Asegura que no haya espacio extra */
+    height: calc(100vh + 1rem);
+    /* Toda la pantalla + 32rem */
+    margin-top: 0;
+    /* Elimina cualquier margen superior */
+    padding-top: 0;
+    /* Asegura que no haya espacio extra */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -131,8 +135,10 @@ header{
 .carousel-item img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Ajusta la imagen para que cubra todo sin deformarse */
-    object-position: center; /* Centra la imagen */
+    object-fit: cover;
+    /* Ajusta la imagen para que cubra todo sin deformarse */
+    object-position: center;
+    /* Centra la imagen */
 }
 
 
@@ -181,13 +187,13 @@ header{
     line-height: 1.5;
 }
 
-.ubi{
+.ubi {
     max-width: 4rem;
     display: flex;
-    margin: 1rem auto ;
+    margin: 1rem auto;
 }
 
-.p-ubi{
+.p-ubi {
     font-family: 'AGrill_font1', sans-serif;
     font-size: 1.5rem;
     color: #201e1e;
@@ -195,70 +201,140 @@ header{
     margin: 1rem;
 }
 
-.menu-h2{
-    font-family: 'AGrill_font1', sans-serif;
+.menu-h2 {
+    font-family: 'AGrill_font2', sans-serif;
     font-size: 2rem;
     color: #201e1e;
     text-align: center;
-    margin: 1rem ;
+    margin: 1rem;
 }
 
-.menu{
+.menu {
     display: flex;
     justify-content: center
 }
 
-.menu-sub{
+.menu-sub {}
 
-}
+.menu-div {}
 
-.menu-div{
-
-}
-
-.menu-p{
+.menu-p {
     text-align: center;
 }
 
-.menu-img{
+.menu-img {
     max-width: 25rem;
     border-radius: 10px;
-    
 }
-/* footer */
 
-.footer{
+.horarios-h3 {
+    font-family: 'AGrill_font2', sans-serif;
+    font-size: 2rem;
+    color: #201e1e;
+    text-align: center;
+    margin: 1rem auto 1.5rem auto;
+}
+
+.horarios{
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ border: 1px solid #201e1e;
+ margin: 0.6rem;
+ border-radius: 10px;
+ background-color: #201e1e;
+
+}
+
+.p-horarios{
+    font-family: 'AGrill_font1', sans-serif;
+    font-size: 1.5rem;
+    color: white;
+    text-align: center;
+    margin-top: 1rem auto 1rem auto
+}
+
+.promociones{
+    border: 1px solid #201e1e;
+    border-radius: 10px;
+    margin: 0.6rem;
     background-color: #201e1e;
 }
 
-.img-social{
+.telefono{
+margin: 1rem 2rem ;
+}
+
+.telefono-h2{
+    font-family: 'AGrill_font1', sans-serif;
+    font-size: 2rem;
+    color: #201e1e;
+    text-align: center;
+}
+
+.a-telefono{
+    font-family: 'AGrill_font1', sans-serif;
+    font-size: 1.8rem;
+    color: green;
+    text-align: center;   
+    text-decoration: none;
+}
+
+.promo-h3{
+    font-family: 'AGrill_font2', sans-serif;
+    font-size: 1.5rem;
+    color: white;
+    text-align: center;
+    font-style: italic;
+    margin-top: 1rem;
+}
+
+.promos{
+    font-family: 'AGrill_font1', sans-serif;
+    font-size: 1.5rem;
+    color: white;
+    text-align: center;
+    margin-top: 2rem;
+
+}
+
+/* footer */
+
+.footer {
+    background-color: #201e1e;
+}
+
+.img-social {
     max-width: 1.5rem;
     margin: 3px;
 }
-.footer-main{
+
+.footer-main {
     display: flex;
     justify-content: space-between;
     padding-top: 2rem;
     padding-bottom: 2rem;
     margin: auto 1.3rem;
 }
-.footer-img{
+
+.footer-img {
     display: flex;
     margin-top: 1rem;
 }
-.footer-social{
+
+.footer-social {
     margin-left: 1.5rem;
 }
 
-.footer-ptext{
-   text-align: center;
-   font-family: 'AGrill_font1';
-   font-size: 1.3rem;
-   font-weight: 400;
-   color: white;
+.footer-ptext {
+    text-align: center;
+    font-family: 'AGrill_font1';
+    font-size: 1.3rem;
+    font-weight: 400;
+    color: white;
 }
 
-.footer-h3text{
+.footer-h3text {
     margin-bottom: 0.5rem;
     font-family: 'AGrill_font2';
     color: white;
@@ -266,19 +342,19 @@ header{
     text-align: center;
 }
 
-.footer-h4text{
+.footer-h4text {
     font-family: 'AGrill_font2';
     color: white;
     font-size: 1rem;
     text-align: center;
 }
 
-.made{
+.made {
     display: flex;
     justify-content: center;
 }
 
-.p-made{
+.p-made {
     margin-bottom: 2.5rem;
     color: white;
     font-family: sans-serif;
@@ -286,6 +362,6 @@ header{
     text-align: center;
 }
 
-.border{
+.border {
     border-top: 1px solid white;
 }
