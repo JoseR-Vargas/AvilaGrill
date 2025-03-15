@@ -393,3 +393,25 @@ border-radius: 10px;
 .border {
     border-top: 1px solid white;
 }
+
+/* pagina menu */
+
+.menu{
+    display: flex;
+    border: 1px solid #201e1e;
+    margin: 1rem;
+}
+
+.img-menu{
+    margin: 0.8rem;
+}
+.nombre-menu{
+    text-align: center;
+}
+
+.ingredientes{
+    text-align: center;
+}
+.price{
+    text-align: center;
+}
