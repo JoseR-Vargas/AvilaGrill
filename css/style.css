@@ -255,7 +255,8 @@ header {
 
 #carouselExampleFade{
     display: flex;
-    flex-direction: column
+    flex-direction: column;
+    margin: 1rem;
 }
 
 .carousel-inner2 img {
@@ -438,4 +439,41 @@ border-radius: 10px;
     text-align: center;
     font-family: 'AGrill_font1';
     font-size: 1.5rem;
+}
+
+/* Bootstrap menu */
+.carousel-text{
+    margin-top: 2rem;
+    border: 1px solid #201e1e;
+    border-radius: 10px;
+}
+
+.h5-menuB{
+    text-align: center;
+    font-family: 'AGrill_font2';
+    margin-top: 1rem;
+}
+
+.description-menu{
+    text-align: center;
+    font-family: 'AGrill_font1';
+    font-size: 1.5rem;
+    margin: 0.8rem 1rem;
+}
+
+.price-menu{
+    text-align: center;
+    font-family: 'AGrill_font1';
+    font-size: 1.5rem;
+    margin: 0.8rem 1rem;
+}
+
+.tapmenu{
+
+}
+
+.h3-tapmenu{
+    text-align: center;
+    font-family: 'AGrill_font2';
+    margin: 2rem;
 }
