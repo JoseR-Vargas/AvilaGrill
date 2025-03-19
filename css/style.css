@@ -210,12 +210,14 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin: 0.8rem;
+    margin: 0.1rem;
+    border-radius: 10px;
 }
 
-.menu-sub {}
+.menu-sub{
+    display: none;
+}
 
-.menu-div {}
 
 .menu-p {
     text-align: center;
@@ -239,7 +241,7 @@ header {
  flex-direction: column;
  align-items: center;
  border: 1px solid #201e1e;
- margin: 0.1rem;
+ margin: 0.5rem;
  border-radius: 10px;
  background-color: #201e1e;
 
@@ -275,7 +277,7 @@ header {
 }
 
 .telefono{
-margin: 1rem 0.1rem;
+margin: 1rem 0.5rem;
 border: 2px solid #201e1e;
 border-radius: 10px;
 }
@@ -414,10 +416,7 @@ border-radius: 10px;
 }
 
 .menu{
-    display: flex;
-    border: 1px solid #201e1e;
-    margin: 1rem;
-    border-radius: 10px;
+
 }
 
 .img-menu{
