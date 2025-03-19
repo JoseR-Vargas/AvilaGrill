@@ -165,6 +165,7 @@ header {
 .ubicacion {
     padding: 1rem ;
     text-align: center;
+    margin-top: 2rem;
 }
 
 .ubicacion h3 {
@@ -227,6 +228,18 @@ header {
     max-width: 25rem;
     border-radius: 10px;
 }
+.see-menu{
+    margin: auto;
+}
+
+.seeMenu{
+    text-align: center;
+    font-family: 'AGrill_font2', sans-serif;
+    font-size: 1.5rem;
+    color: #201e1e;
+    text-align: center;
+    margin: 1rem auto 1.5rem auto;
+}
 
 .horarios-h3 {
     font-family: 'AGrill_font2', sans-serif;
@@ -276,27 +289,41 @@ header {
     background-color: #201e1e;
 }
 
-.telefono{
-margin: 1rem 0.5rem;
-border: 2px solid #201e1e;
-border-radius: 10px;
+.telefono {
+    margin: 1rem 0.5rem;
+    padding: 1rem;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #4CAF50, #2E7D32);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
 }
 
-.telefono-h2{
+.telefono-h2 {
     font-family: 'AGrill_font1', sans-serif;
     font-size: 2rem;
-    color: #201e1e;
-    text-align: center;
-    margin: 0.2rem;
+    color: white;
+    margin-bottom: 0.5rem;
 }
 
-.a-telefono{
+.a-telefono {
+    display: inline-block;
     font-family: 'AGrill_font1', sans-serif;
     font-size: 1.8rem;
-    color: green;
-    text-align: center;   
+    color: white;
     text-decoration: none;
+    background: #43A047;
+    padding: 0.8rem 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease-in-out;
 }
+
+.a-telefono:hover {
+    background: #2E7D32;
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.4);
+    transform: scale(1.05);
+}
+
 
 .promo-h3{
     font-family: 'AGrill_font2', sans-serif;
