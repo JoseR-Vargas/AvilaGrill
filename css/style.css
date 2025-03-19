@@ -517,6 +517,10 @@ header {
     display: none;
 }
 
+.main-container-fotos{
+    display: none;
+}
+
 .menu-link {
     text-decoration: none;
     color: #201e1e;
@@ -629,4 +633,50 @@ header {
     .ubicacion h3 {
         font-size: 3rem;
     }
+
+    /* Menu Appetizer Burguer From thegrill */
+
+.main-container-fotos{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 3rem;
+}
+
+.container-fotos{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #201e1e;
+   margin: 0.5rem;
+   border-radius: 10px;
+}
+
+.div-img{
+    display: flex;
+}
+
+.imgResponsive{
+    max-width: 18rem;
+    height: 100%;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+.container-texto{
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.producto{
+
+}
+
+.description{
+
+}
+
+.price-menu{
+
+}
+
 }
