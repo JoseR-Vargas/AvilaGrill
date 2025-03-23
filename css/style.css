@@ -305,7 +305,7 @@ header {
     padding: 1rem;
     border-radius: 12px;
     background: linear-gradient(135deg, #4CAF50, #2E7D32);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); */
     text-align: center;
 }
 
