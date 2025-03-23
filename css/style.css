@@ -61,7 +61,7 @@ header {
     .cerrar-menu {
         position: absolute;
         top: 1.7rem;
-        left: 30%;
+        left: 10%;
         transform: translateX(-20%);
     }
 
