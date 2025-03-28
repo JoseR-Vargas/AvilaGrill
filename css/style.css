@@ -305,7 +305,7 @@ header {
     padding: 1rem;
     border-radius: 12px;
     background: linear-gradient(135deg, #4CAF50, #2E7D32);
-    /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     text-align: center;
 }
 
@@ -325,13 +325,13 @@ header {
     background: #43A047;
     padding: 0.8rem 1.5rem;
     border-radius: 8px;
-    /* box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3); */
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
     transition: all 0.3s ease-in-out;
 }
 
 .a-telefono:hover {
     background: #2E7D32;
-    /* box-shadow: 0 5px 12px rgba(0, 0, 0, 0.4); */
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.4);
     transform: scale(1.05);
 }
 
