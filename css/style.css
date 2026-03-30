@@ -135,10 +135,20 @@ img {
     display: block;
 }
 
-/* Mobile nav drawer */
+/* Mobile nav drawer + menu PDF toggle */
 @media (max-width: 768px) {
     .abrir-menu {
         display: block;
+    }
+
+    /* Mostrar botón PDF y ocultar tabs del menú */
+    .menu-mobile-cta {
+        display: block !important;
+    }
+
+    .menu-nav,
+    .menu-tab-content {
+        display: none;
     }
 
     .nav {
@@ -523,6 +533,61 @@ img {
 
 .menu-group-title:first-child {
     margin-top: 0;
+}
+
+/* ============================================================
+   MENU — MOBILE PDF CTA
+   ============================================================ */
+
+.menu-mobile-cta {
+    display: none; /* oculto por defecto; el @media lo activa en mobile */
+    text-align: center;
+    padding: 2.5rem 1.5rem 3rem;
+}
+
+/* Forzar ocultación en desktop (cascada segura) */
+@media (min-width: 769px) {
+    .menu-mobile-cta {
+        display: none !important;
+    }
+}
+
+.btn-abrir-menu {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.7rem;
+    background: transparent;
+    border: 1.5px solid var(--gold);
+    color: var(--gold);
+    font-family: 'AGrill_display', sans-serif;
+    font-size: 1rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    padding: 1rem 2.4rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.25s ease, color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.btn-abrir-menu i {
+    font-size: 1.25rem;
+    flex-shrink: 0;
+}
+
+.btn-abrir-menu:hover,
+.btn-abrir-menu:active {
+    background-color: var(--gold);
+    color: var(--dark);
+    box-shadow: 0 0 28px rgba(201, 160, 82, 0.3);
+}
+
+.menu-mobile-hint {
+    font-family: 'AGrill_body', sans-serif;
+    font-size: 0.78rem;
+    color: rgba(255, 255, 255, 0.3);
+    letter-spacing: 0.06em;
+    margin-top: 0.9rem;
+    margin-bottom: 0;
 }
 
 /* ============================================================
