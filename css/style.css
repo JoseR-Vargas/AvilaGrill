@@ -358,55 +358,65 @@ img {
     background-color: var(--gold);
 }
 
-/* Horizontal scrollable tabs wrapper */
+/* Sticky nav container — se pega debajo del header al hacer scroll */
+.menu-nav {
+    position: sticky;
+    top: var(--header-h);
+    z-index: 100;
+    background: var(--dark);
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.55);
+    margin-bottom: 0;
+}
+
+/* Horizontal scrollable wrapper — scrollbar oculto */
 .menu-tabs-wrapper {
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
-    margin-bottom: 0;
-    /* hide scrollbar visually */
-    scrollbar-width: thin;
-    scrollbar-color: var(--gold) transparent;
+    scrollbar-width: none;
+    padding: 0.85rem 0;
 }
 
 .menu-tabs-wrapper::-webkit-scrollbar {
-    height: 3px;
+    display: none;
 }
 
-.menu-tabs-wrapper::-webkit-scrollbar-thumb {
-    background-color: var(--gold);
-    border-radius: 2px;
-}
-
+/* Pills row */
 .menu-tabs {
-    border-bottom: 2px solid rgba(201, 160, 82, 0.25) !important;
+    border-bottom: none !important;
     flex-wrap: nowrap !important;
     white-space: nowrap;
     min-width: max-content;
-    gap: 0;
+    gap: 0.45rem;
+    padding: 0 0.25rem;
 }
 
+/* Tab pill base */
 .menu-tabs .nav-link {
     font-family: 'AGrill_body', sans-serif;
-    font-size: 0.9rem;
-    letter-spacing: 0.07em;
-    color: rgba(255, 255, 255, 0.5) !important;
-    border: none !important;
-    border-bottom: 2px solid transparent !important;
-    padding: 0.65rem 1.1rem;
+    font-size: 0.82rem;
+    letter-spacing: 0.04em;
+    color: rgba(255, 255, 255, 0.55) !important;
+    border: 1.5px solid rgba(201, 160, 82, 0.25) !important;
+    border-radius: 50px !important;
+    padding: 0.42rem 1rem;
     background: transparent !important;
-    border-radius: 0 !important;
-    transition: color 0.2s, border-color 0.2s;
+    transition: all 0.2s ease;
     text-transform: uppercase;
+    white-space: nowrap;
 }
 
 .menu-tabs .nav-link:hover {
     color: var(--white) !important;
-    border-bottom-color: rgba(201, 160, 82, 0.45) !important;
+    border-color: rgba(201, 160, 82, 0.65) !important;
+    background: rgba(201, 160, 82, 0.1) !important;
 }
 
+/* Active pill — gold filled */
 .menu-tabs .nav-link.active {
-    color: var(--gold) !important;
-    border-bottom: 2px solid var(--gold) !important;
+    color: var(--dark) !important;
+    background-color: var(--gold) !important;
+    border-color: var(--gold) !important;
+    font-weight: bold;
 }
 
 .menu-tab-content {
@@ -817,9 +827,42 @@ footer {
         font-size: 0.95rem;
     }
 
-    .menu-tabs .nav-link {
-        font-size: 0.8rem;
-        padding: 0.55rem 0.85rem;
+    /* Cards compactas en mobile — 2 columnas */
+    .menu-card-img,
+    .menu-card-no-img {
+        height: 130px;
+    }
+
+    .menu-card-no-img i {
+        font-size: 2.2rem;
+    }
+
+    .menu-card-body {
+        padding: 0.65rem 0.7rem;
+    }
+
+    .menu-card-name {
+        font-size: 0.88rem;
+        margin-bottom: 0.3rem;
+    }
+
+    .menu-card-desc {
+        font-size: 0.75rem;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        margin-bottom: 0.55rem;
+    }
+
+    .menu-card-price {
+        font-size: 0.82rem;
+        padding: 0.15rem 0.6rem;
+    }
+
+    .menu-group-title {
+        font-size: 1rem;
+        margin: 1.5rem 0 0.75rem;
     }
 
     .footer-inner {
