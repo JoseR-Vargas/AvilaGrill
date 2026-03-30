@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Avila Grill Miami — The Authentic Grill Experience</title>
+    <title>Avila Grill Miami — La auténtica experiencia a la parrilla</title>
 
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
@@ -24,23 +24,67 @@
                 <img src="./img/LOGO_AVILA GRILL_WHITE.png" alt="Avila Grill Miami" class="logo">
             </a>
 
-            <button id="abrir" class="abrir-menu" aria-label="Abrir menú">
-                <i class="bi bi-list"></i>
+            <button id="abrir" class="abrir-menu" type="button" aria-label="Abrir navegación principal"
+                aria-controls="nav" aria-expanded="false">
+                <span class="abrir-menu-box" aria-hidden="true">
+                    <span class="abrir-menu-line"></span>
+                    <span class="abrir-menu-line"></span>
+                    <span class="abrir-menu-line"></span>
+                </span>
+                <span class="abrir-menu-text">Menú</span>
             </button>
 
-            <div class="nav-overlay" id="nav-overlay"></div>
+            <div class="nav-overlay" id="nav-overlay" aria-hidden="true"></div>
 
-            <nav class="nav" id="nav">
-                <button class="cerrar-menu" id="cerrar" aria-label="Cerrar menú">
-                    <i class="bi bi-x-circle"></i>
-                </button>
-                <ul class="nav-list">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About Us</a></li>
-                    <li><a href="#menu">Menu</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                    <li><a href="#location">Location</a></li>
-                </ul>
+            <nav class="nav" id="nav" aria-label="Navegación principal" aria-hidden="true">
+                <div class="nav-panel">
+                    <div class="nav-panel-header">
+                        <div class="nav-panel-copy">
+                            <p class="nav-eyebrow">Navegación</p>
+                            <p class="nav-title">Avila Grill Miami</p>
+                        </div>
+                        <button class="cerrar-menu" id="cerrar" type="button" aria-label="Cerrar navegación principal">
+                            Cerrar
+                        </button>
+                    </div>
+
+                    <ul class="nav-list">
+                        <li>
+                            <a href="#home">
+                                <span class="nav-link-index">01</span>
+                                <span class="nav-link-text">Inicio</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#about">
+                                <span class="nav-link-index">02</span>
+                                <span class="nav-link-text">Nosotros</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#menu">
+                                <span class="nav-link-index">03</span>
+                                <span class="nav-link-text">Menú</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#contact">
+                                <span class="nav-link-index">04</span>
+                                <span class="nav-link-text">Contacto</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#location">
+                                <span class="nav-link-index">05</span>
+                                <span class="nav-link-text">Ubicación</span>
+                            </a>
+                        </li>
+                    </ul>
+
+                    <div class="nav-panel-footer">
+                        <p class="nav-panel-note">Street grill venezolana en Miami desde 2023.</p>
+                    </div>
+                </div>
             </nav>
         </div>
     </header>
@@ -52,7 +96,7 @@
         <div class="hero-overlay"></div>
         <div class="hero-content">
             <img src="./img/LOGO_AVILA GRILL_WHITE.png" alt="Avila Grill Miami" class="hero-logo">
-            <p class="hero-tagline">The Authentic Grill Experience</p>
+            <p class="hero-tagline">La auténtica experiencia a la parrilla</p>
             <a href="#menu" class="hero-cta">Ver Menú</a>
         </div>
     </section>
@@ -64,7 +108,7 @@
              ==================================================== -->
         <section id="about" class="section">
             <div class="container">
-                <h2 class="section-title">About Us</h2>
+                <h2 class="section-title">Nosotros</h2>
                 <div class="section-divider"></div>
                 <p class="about-text">
                     Avila Grill fue fundado en enero de 2023 con el objetivo de ofrecer comida deliciosa y de alta
@@ -75,8 +119,8 @@
                     visitante.
                 </p>
                 <div class="about-grid">
-                    <img src="./img/FoodTruckAvilaGrill.JPG" alt="Avila Grill Food Truck">
-                    <img src="./img/Foto Avila Grill Edimar&Gabo.jpeg" alt="Equipo Avila Grill">
+                    <img src="./img/FoodTruckAvilaGrill.JPG" alt="Food truck de Avila Grill">
+                    <img src="./img/Foto Avila Grill Edimar&Gabo.jpeg" alt="Equipo de Avila Grill">
                 </div>
             </div>
         </section>
@@ -90,6 +134,29 @@
                 <div class="section-divider"></div>
             </div>
 
+            <div class="container menu-desktop-shell">
+                <div class="menu-desktop-showcase">
+                    <div class="menu-desktop-copy">
+                        <span class="menu-kicker">PDF EN PANTALLA</span>
+                        <h3 class="menu-desktop-title">Mira el menú completo al instante</h3>
+                        <p class="menu-desktop-text">
+                            En desktop ahora mostramos el PDF directamente dentro de la página con una presentación más visual,
+                            para que el cliente entre, lo vea rápido y tenga ganas de pedir.
+                        </p>
+                        <div class="menu-desktop-actions">
+                            <a href="#menu-pdf-viewer" class="btn-menu-primary">Ver PDF Ahora</a>
+                            <a href="./menu/menu-avila-grill.pdf" target="_blank" rel="noopener" class="btn-menu-secondary">
+                                Abrir Pantalla Completa
+                            </a>
+                        </div>
+                    </div>
+                    <div class="menu-desktop-signal">
+                        <span class="menu-signal-dot"></span>
+                        <span>Experiencia visual del menú</span>
+                    </div>
+                </div>
+            </div>
+
             <!-- Mobile — botón abrir PDF -->
             <div class="menu-mobile-cta">
                 <a href="./menu/menu-avila-grill.pdf" target="_blank" rel="noopener" class="btn-abrir-menu" aria-label="Abrir menú en PDF">
@@ -99,850 +166,34 @@
                 <p class="menu-mobile-hint">Toca para ver el menú completo</p>
             </div>
 
-            <!-- Tab navigation — sticky pill bar, full width -->
-            <div class="menu-nav">
-                <div class="container">
-                    <div class="menu-tabs-wrapper">
-                        <ul class="nav menu-tabs" id="menuTabs" role="tablist">
-                            <li class="nav-item" role="presentation">
-                                <button class="nav-link active" id="tab-entradas" data-bs-toggle="tab"
-                                    data-bs-target="#pane-entradas" type="button" role="tab">🍟 Entradas</button>
-                            </li>
-                            <li class="nav-item" role="presentation">
-                                <button class="nav-link" id="tab-hamburguesas" data-bs-toggle="tab"
-                                    data-bs-target="#pane-hamburguesas" type="button" role="tab">🍔 Hamburguesas</button>
-                            </li>
-                            <li class="nav-item" role="presentation">
-                                <button class="nav-link" id="tab-parrillas" data-bs-toggle="tab"
-                                    data-bs-target="#pane-parrillas" type="button" role="tab">🔥 Parrillas</button>
-                            </li>
-                            <li class="nav-item" role="presentation">
-                                <button class="nav-link" id="tab-pepitos" data-bs-toggle="tab"
-                                    data-bs-target="#pane-pepitos" type="button" role="tab">🥪 Pepitos</button>
-                            </li>
-                            <li class="nav-item" role="presentation">
-                                <button class="nav-link" id="tab-choripanes" data-bs-toggle="tab"
-                                    data-bs-target="#pane-choripanes" type="button" role="tab">🌭 Choripanes</button>
-                            </li>
-                            <li class="nav-item" role="presentation">
-                                <button class="nav-link" id="tab-hotdogs" data-bs-toggle="tab"
-                                    data-bs-target="#pane-hotdogs" type="button" role="tab">🌭 Perros</button>
-                            </li>
-                            <li class="nav-item" role="presentation">
-                                <button class="nav-link" id="tab-arepas" data-bs-toggle="tab"
-                                    data-bs-target="#pane-arepas" type="button" role="tab">🫓 Arepas</button>
-                            </li>
-                            <li class="nav-item" role="presentation">
-                                <button class="nav-link" id="tab-cachapas" data-bs-toggle="tab"
-                                    data-bs-target="#pane-cachapas" type="button" role="tab">🥞 Cachapas</button>
-                            </li>
-                            <li class="nav-item" role="presentation">
-                                <button class="nav-link" id="tab-sides" data-bs-toggle="tab"
-                                    data-bs-target="#pane-sides" type="button" role="tab">🍽️ Lados</button>
-                            </li>
-                            <li class="nav-item" role="presentation">
-                                <button class="nav-link" id="tab-drinks" data-bs-toggle="tab"
-                                    data-bs-target="#pane-drinks" type="button" role="tab">🥤 Bebidas</button>
-                            </li>
-                            <li class="nav-item" role="presentation">
-                                <button class="nav-link" id="tab-kids" data-bs-toggle="tab"
-                                    data-bs-target="#pane-kids" type="button" role="tab">⭐ Kids</button>
-                            </li>
-                            <li class="nav-item" role="presentation">
-                                <button class="nav-link" id="tab-postres" data-bs-toggle="tab"
-                                    data-bs-target="#pane-postres" type="button" role="tab">🍫 Postres</button>
-                            </li>
-                        </ul>
+            <div class="container menu-pdf-desktop" id="menu-pdf-viewer">
+                <div class="menu-pdf-panel">
+                    <div class="menu-pdf-panel-head">
+                        <div class="menu-pdf-lights" aria-hidden="true">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <p class="menu-pdf-label">Menú oficial en PDF</p>
+                        <a href="./menu/menu-avila-grill.pdf" target="_blank" rel="noopener" class="menu-pdf-link">
+                            Abrir PDF
+                        </a>
                     </div>
+                    <object
+                        data="./menu/menu-avila-grill.pdf#view=FitH"
+                        type="application/pdf"
+                        aria-label="Menú Avila Grill en PDF"
+                        class="menu-pdf-embed">
+                        <div class="menu-pdf-fallback">
+                            <p>Tu navegador no pudo mostrar el PDF aquí.</p>
+                            <a href="./menu/menu-avila-grill.pdf" target="_blank" rel="noopener">Abrir el menú completo</a>
+                        </div>
+                    </object>
                 </div>
+                <p class="menu-pdf-note">
+                    Revisa el PDF completo aquí mismo o ábrelo en pantalla completa si prefieres una vista más amplia.
+                </p>
             </div>
-
-            <div class="container">
-                <!-- Tab content -->
-                <div class="tab-content menu-tab-content" id="menuTabContent">
-
-                    <!-- ENTRADAS -->
-                    <div class="tab-pane fade show active" id="pane-entradas" role="tabpanel">
-                        <div class="row g-4">
-                            <div class="col-6 col-lg-4">
-                                <div class="menu-card">
-                                    <div class="menu-card-img">
-                                        <img src="https://res.cloudinary.com/dyg0knk2o/image/upload/v1742323095/VDR52255_x0ggcb.jpg" alt="Tequeños">
-                                    </div>
-                                    <div class="menu-card-body">
-                                        <h5 class="menu-card-name">Tequeños</h5>
-                                        <p class="menu-card-desc">Tiras de queso blanco envueltas en masa de harina de trigo, fritas hasta quedar crujientes por fuera y derretidas por dentro (4 und.)</p>
-                                        <span class="menu-card-price">$8.49</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-6 col-lg-4">
-                                <div class="menu-card">
-                                    <div class="menu-card-img">
-                                        <img src="https://res.cloudinary.com/dyg0knk2o/image/upload/v1742323094/VDR52232_oozupp.jpg" alt="Mini Arepitas">
-                                    </div>
-                                    <div class="menu-card-body">
-                                        <h5 class="menu-card-name">Mini Arepitas with Grilled Cheese</h5>
-                                        <p class="menu-card-desc">Arepitas fritas con queso a la plancha.</p>
-                                        <span class="menu-card-price">$7.49</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-6 col-lg-4">
-                                <div class="menu-card">
-                                    <div class="menu-card-no-img">
-                                        <i class="bi bi-egg-fried"></i>
-                                    </div>
-                                    <div class="menu-card-body">
-                                        <h5 class="menu-card-name">French Fries</h5>
-                                        <p class="menu-card-desc">Papas fritas crujientes.</p>
-                                        <span class="menu-card-price">$5.99</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-6 col-lg-4">
-                                <div class="menu-card">
-                                    <div class="menu-card-img">
-                                        <img src="https://res.cloudinary.com/dyg0knk2o/image/upload/v1742589080/Chicharron_c57ydf.jpg" alt="Chicharron">
-                                    </div>
-                                    <div class="menu-card-body">
-                                        <h5 class="menu-card-name">Chicharron</h5>
-                                        <p class="menu-card-desc">12 oz de cerdo frito (Masitas de Cerdo).</p>
-                                        <span class="menu-card-price">$8.99</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-6 col-lg-4">
-                                <div class="menu-card">
-                                    <div class="menu-card-img">
-                                        <img src="https://res.cloudinary.com/dyg0knk2o/image/upload/v1742750649/Empanadas_hysstu.jpg" alt="Empanadas">
-                                    </div>
-                                    <div class="menu-card-body">
-                                        <h5 class="menu-card-name">Empanadas</h5>
-                                        <p class="menu-card-desc">Mechada · Pollo · Queso</p>
-                                        <span class="menu-card-price">$2.99</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- HAMBURGUESAS -->
-                    <div class="tab-pane fade" id="pane-hamburguesas" role="tabpanel">
-                        <p class="menu-card-desc mb-4" style="color:rgba(255,255,255,0.5); font-size:0.9rem;">
-                            Todas incluyen: lechuga, tomate, tocineta, jamón, huevo frito, queso amarillo, papas ralladas, salsa de tomate y salsa de ajo.
-                        </p>
-                        <div class="row g-4">
-                            <div class="col-6 col-lg-4">
-                                <div class="menu-card">
-                                    <div class="menu-card-img">
-                                        <img src="https://res.cloudinary.com/dyg0knk2o/image/upload/v1742751441/hambuirguesaanimacion_zy8gce.jpg" alt="Hamburguesa de Carne">
-                                    </div>
-                                    <div class="menu-card-body">
-                                        <h5 class="menu-card-name">Hamburguesa de Carne</h5>
-                                        <p class="menu-card-desc">½ lb de carne molida artesanal.</p>
-                                        <span class="menu-card-price">$14.99</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-6 col-lg-4">
-                                <div class="menu-card">
-                                    <div class="menu-card-img">
-                                        <img src="https://res.cloudinary.com/dyg0knk2o/image/upload/v1742750890/Hamburguesa_de_pollo_lzhyyw.jpg" alt="Hamburguesa de Pollo">
-                                    </div>
-                                    <div class="menu-card-body">
-                                        <h5 class="menu-card-name">Hamburguesa de Pollo</h5>
-                                        <p class="menu-card-desc">Pechuga de pollo a la plancha.</p>
-                                        <span class="menu-card-price">$12.99</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-6 col-lg-4">
-                                <div class="menu-card">
-                                    <div class="menu-card-img">
-                                        <img src="https://res.cloudinary.com/dyg0knk2o/image/upload/v1742751441/hambuirguesaanimacion_zy8gce.jpg" alt="Chuleta Ahumada">
-                                    </div>
-                                    <div class="menu-card-body">
-                                        <h5 class="menu-card-name">Pork (Chop)</h5>
-                                        <p class="menu-card-desc">Chuleta ahumada a la parrilla.</p>
-                                        <span class="menu-card-price">$14.99</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-6 col-lg-4">
-                                <div class="menu-card">
-                                    <div class="menu-card-img">
-                                        <img src="https://res.cloudinary.com/dyg0knk2o/image/upload/v1742591360/Mixta_Hamb_hfslei.jpg" alt="Mixta">
-                                    </div>
-                                    <div class="menu-card-body">
-                                        <h5 class="menu-card-name">Mixta (2 Proteínas)</h5>
-                                        <p class="menu-card-desc">Combinación de dos proteínas a tu elección.</p>
-                                        <span class="menu-card-price">$19.99</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-6 col-lg-4">
-                                <div class="menu-card">
-                                    <div class="menu-card-img">
-                                        <img src="https://res.cloudinary.com/dyg0knk2o/image/upload/v1742751441/hambuirguesaanimacion_zy8gce.jpg" alt="Triple">
-                                    </div>
-                                    <div class="menu-card-body">
-                                        <h5 class="menu-card-name">Triple (3 Proteínas)</h5>
-                                        <p class="menu-card-desc">Tres proteínas a la parrilla en una sola hamburguesa.</p>
-                                        <span class="menu-card-price">$24.99</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-6 col-lg-4">
-                                <div class="menu-card">
-                                    <div class="menu-card-img">
-                                        <img src="https://res.cloudinary.com/dyg0knk2o/image/upload/v1742592297/Doble_carne_ywmc9k.jpg" alt="Doble Beef">
-                                    </div>
-                                    <div class="menu-card-body">
-                                        <h5 class="menu-card-name">Doble Beef</h5>
-                                        <p class="menu-card-desc">Doble medallón de carne molida artesanal.</p>
-                                        <span class="menu-card-price">$20.99</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-6 col-lg-4">
-                                <div class="menu-card">
-                                    <div class="menu-card-img">
-                                        <img src="https://res.cloudinary.com/dyg0knk2o/image/upload/v1742592384/_Picana_on5mlj.jpg" alt="Picaña o Churrasco">
-                                    </div>
-                                    <div class="menu-card-body">
-                                        <h5 class="menu-card-name">Picaña o Churrasco</h5>
-                                        <p class="menu-card-desc">Corte premium a la parrilla en pan artesanal.</p>
-                                        <span class="menu-card-price">$20.99</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- PARRILLAS -->
-                    <div class="tab-pane fade" id="pane-parrillas" role="tabpanel">
-
-                        <h3 class="menu-group-title">Parrillita <small style="font-size:0.8rem; opacity:0.6;">(1 persona — 12 oz proteína + 2 acompañantes)</small></h3>
-                        <div class="row g-4">
-                            <div class="col-6 col-lg-4">
-                                <div class="menu-card">
-                                    <div class="menu-card-img">
-                                        <img src="https://res.cloudinary.com/dyg0knk2o/image/upload/v1742752255/parrilla_animacion_tekzhb.jpg" alt="Parrilla de Carne">
-                                    </div>
-                                    <div class="menu-card-body">
-                                        <h5 class="menu-card-name">Beef (Picaña o Churrasco)</h5>
-                                        <p class="menu-card-desc">12 oz de picaña o churrasco con dos acompañantes.</p>
-                                        <span class="menu-card-price">$22.49</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-6 col-lg-4">
-                                <div class="menu-card">
-                                    <div class="menu-card-img">
-                                        <img src="https://res.cloudinary.com/dyg0knk2o/image/upload/v1742752255/parrilla_animacion_tekzhb.jpg" alt="Parrilla de Pollo">
-                                    </div>
-                                    <div class="menu-card-body">
-                                        <h5 class="menu-card-name">Chicken</h5>
-                                        <p class="menu-card-desc">12 oz de pollo a la parrilla con dos acompañantes.</p>
-                                        <span class="menu-card-price">$17.49</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-6 col-lg-4">
-                                <div class="menu-card">
-                                    <div class="menu-card-img">
-                                        <img src="https://res.cloudinary.com/dyg0knk2o/image/upload/v1742592819/Parrillita_mixta_xl0p9x.jpg" alt="Parrilla Mixta">
-                                    </div>
-                                    <div class="menu-card-body">
-                                        <h5 class="menu-card-name">Mixed</h5>
-                                        <p class="menu-card-desc">6 oz de carne + 6 oz de pollo con dos acompañantes.</p>
-                                        <span class="menu-card-price">$19.99</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <h3 class="menu-group-title">Pinchos (Skewers)</h3>
-                        <div class="row g-4">
-                            <div class="col-6 col-lg-4">
-                                <div class="menu-card">
-                                    <div class="menu-card-img">
-                                        <img src="https://res.cloudinary.com/dyg0knk2o/image/upload/v1742321749/VDR52225_z8buh2.jpg" alt="Pinchos">
-                                    </div>
-                                    <div class="menu-card-body">
-                                        <h5 class="menu-card-name">Plato de Pinchos</h5>
-                                        <p class="menu-card-desc">2 brochetas de Filet Mignon con dos acompañantes (1 persona). Add 1 skewer: $9.99</p>
-                                        <span class="menu-card-price">$21.99</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <h3 class="menu-group-title">By the Pound</h3>
-                        <div class="row g-4">
-                            <div class="col-6 col-lg-3">
-                                <div class="menu-card">
-                                    <div class="menu-card-img">
-                                        <img src="https://res.cloudinary.com/dyg0knk2o/image/upload/v1742752102/parrilla_1_libra_facaqi.jpg" alt="½ lb Picaña">
-                                    </div>
-                                    <div class="menu-card-body">
-                                        <h5 class="menu-card-name">½ lb Picaña / Churrasco</h5>
-                                        <p class="menu-card-desc"></p>
-                                        <span class="menu-card-price">$16.99</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-6 col-lg-3">
-                                <div class="menu-card">
-                                    <div class="menu-card-img">
-                                        <img src="https://res.cloudinary.com/dyg0knk2o/image/upload/v1742752102/parrilla_1_libra_facaqi.jpg" alt="1 lb Picaña">
-                                    </div>
-                                    <div class="menu-card-body">
-                                        <h5 class="menu-card-name">1 lb Picaña / Churrasco</h5>
-                                        <p class="menu-card-desc"></p>
-                                        <span class="menu-card-price">$25.99</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-6 col-lg-3">
-                                <div class="menu-card">
-                                    <div class="menu-card-img">
-                                        <img src="https://res.cloudinary.com/dyg0knk2o/image/upload/v1742752255/parrilla_animacion_tekzhb.jpg" alt="½ lb Chicken">
-                                    </div>
-                                    <div class="menu-card-body">
-                                        <h5 class="menu-card-name">½ lb Chicken</h5>
-                                        <p class="menu-card-desc"></p>
-                                        <span class="menu-card-price">$11.99</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-6 col-lg-3">
-                                <div class="menu-card">
-                                    <div class="menu-card-img">
-                                        <img src="https://res.cloudinary.com/dyg0knk2o/image/upload/v1742752255/parrilla_animacion_tekzhb.jpg" alt="1 lb Chicken">
-                                    </div>
-                                    <div class="menu-card-body">
-                                        <h5 class="menu-card-name">1 lb Chicken</h5>
-                                        <p class="menu-card-desc"></p>
-                                        <span class="menu-card-price">$17.99</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <h3 class="menu-group-title">Combos para compartir</h3>
-                        <div class="row g-4">
-                            <div class="col-6 col-lg-4">
-                                <div class="menu-card">
-                                    <div class="menu-card-img">
-                                        <img src="https://res.cloudinary.com/dyg0knk2o/image/upload/v1742593063/_Simple_mixed_ecmuij.jpg" alt="Simple Mixed">
-                                    </div>
-                                    <div class="menu-card-body">
-                                        <h5 class="menu-card-name">Simple Mixed</h5>
-                                        <p class="menu-card-desc">2–3 personas. Beef, Chicken, Chorizo, Queso a la plancha, Pico de Gallo + 1 acompañante.</p>
-                                        <span class="menu-card-price">$41.99</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-6 col-lg-4">
-                                <div class="menu-card">
-                                    <div class="menu-card-img">
-                                        <img src="https://res.cloudinary.com/dyg0knk2o/image/upload/v1742593171/simple_beef_ajc1jg.jpg" alt="Simple Beef">
-                                    </div>
-                                    <div class="menu-card-body">
-                                        <h5 class="menu-card-name">Simple Beef</h5>
-                                        <p class="menu-card-desc">2–3 personas. 1.5 lb Beef (Picaña o Churrasco), Queso a la plancha, Pico de Gallo + 1 acompañante.</p>
-                                        <span class="menu-card-price">$44.99</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-6 col-lg-4">
-                                <div class="menu-card">
-                                    <div class="menu-card-img">
-                                        <img src="https://res.cloudinary.com/dyg0knk2o/image/upload/v1742593332/Avila_grill_special_sx6ovp.jpg" alt="Avila Grill Special">
-                                    </div>
-                                    <div class="menu-card-body">
-                                        <h5 class="menu-card-name">Avila Grill Special</h5>
-                                        <p class="menu-card-desc">3–4 personas. Chicharron, Beef, Chicken, 2 Chorizo, Queso, Pico de Gallo + 2 acompañantes.</p>
-                                        <span class="menu-card-price">$63.99</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- PEPITOS -->
-                    <div class="tab-pane fade" id="pane-pepitos" role="tabpanel">
-                        <p class="menu-card-desc mb-4" style="color:rgba(255,255,255,0.5); font-size:0.9rem;">
-                            Pan francés, jamón, queso, tocineta, papas ralladas, lechuga, tomate, maíz, salsa de tomate y salsa de ajo.
-                        </p>
-                        <div class="row g-4">
-                            <div class="col-6 col-lg-4">
-                                <div class="menu-card">
-                                    <div class="menu-card-img">
-                                        <img src="https://res.cloudinary.com/dyg0knk2o/image/upload/v1742751441/hambuirguesaanimacion_zy8gce.jpg" alt="Pepito de Carne">
-                                    </div>
-                                    <div class="menu-card-body">
-                                        <h5 class="menu-card-name">Beef (Picaña o Churrasco)</h5>
-                                        <p class="menu-card-desc">Corte premium a la parrilla.</p>
-                                        <span class="menu-card-price">$20.99</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-6 col-lg-4">
-                                <div class="menu-card">
-                                    <div class="menu-card-img">
-                                        <img src="https://res.cloudinary.com/dyg0knk2o/image/upload/v1742752581/Pepito_pollo_1_hrkuh6.jpg" alt="Pepito de Pollo">
-                                    </div>
-                                    <div class="menu-card-body">
-                                        <h5 class="menu-card-name">Chicken</h5>
-                                        <p class="menu-card-desc">Pechuga de pollo a la parrilla.</p>
-                                        <span class="menu-card-price">$17.49</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-6 col-lg-4">
-                                <div class="menu-card">
-                                    <div class="menu-card-img">
-                                        <img src="https://res.cloudinary.com/dyg0knk2o/image/upload/v1742752403/Pepito_mixto_p6w5tu.jpg" alt="Pepito Mixto">
-                                    </div>
-                                    <div class="menu-card-body">
-                                        <h5 class="menu-card-name">Mixed</h5>
-                                        <p class="menu-card-desc">Combinación de dos proteínas a la parrilla.</p>
-                                        <span class="menu-card-price">$18.99</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- CHORIPANES -->
-                    <div class="tab-pane fade" id="pane-choripanes" role="tabpanel">
-                        <div class="row g-4 justify-content-center">
-                            <div class="col-12 col-sm-8 col-lg-4">
-                                <div class="menu-card">
-                                    <div class="menu-card-img">
-                                        <img src="https://res.cloudinary.com/dyg0knk2o/image/upload/v1742752803/_choripan_fdetnq.jpg" alt="Choripan">
-                                    </div>
-                                    <div class="menu-card-body">
-                                        <h5 class="menu-card-name">Choripan</h5>
-                                        <p class="menu-card-desc">Pan francés, chorizo, pico de gallo y salsa especial de cilantro.</p>
-                                        <span class="menu-card-price">$13.99</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- PERROS CALIENTES -->
-                    <div class="tab-pane fade" id="pane-hotdogs" role="tabpanel">
-                        <div class="row g-4 justify-content-center">
-                            <div class="col-12 col-sm-8 col-lg-4">
-                                <div class="menu-card">
-                                    <div class="menu-card-img">
-                                        <img src="https://res.cloudinary.com/dyg0knk2o/image/upload/v1742323094/VDR52212_zrb4nm.jpg" alt="Perro Caliente">
-                                    </div>
-                                    <div class="menu-card-body">
-                                        <h5 class="menu-card-name">Hot Dog</h5>
-                                        <p class="menu-card-desc">Salchicha Angus Beef, repollo, cebolla, papas ralladas, maíz, salsa de tomate y salsa de ajo.</p>
-                                        <span class="menu-card-price">$5.99</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- AREPAS -->
-                    <div class="tab-pane fade" id="pane-arepas" role="tabpanel">
-                        <p class="menu-card-desc mb-4" style="color:rgba(255,255,255,0.5); font-size:0.9rem;">
-                            Harina de maíz o Tostón (plátano verde), proteína, pico de gallo, queso a la plancha y salsa especial.
-                        </p>
-                        <div class="row g-4">
-                            <div class="col-6 col-lg-4">
-                                <div class="menu-card">
-                                    <div class="menu-card-img">
-                                        <img src="https://res.cloudinary.com/dyg0knk2o/image/upload/v1742753454/Arepa_PICANA_fppm2l.jpg" alt="Arepa Beef">
-                                    </div>
-                                    <div class="menu-card-body">
-                                        <h5 class="menu-card-name">Beef (Picaña / Churrasco)</h5>
-                                        <p class="menu-card-desc">½ lb de corte premium a la parrilla.</p>
-                                        <span class="menu-card-price">$15.99</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-6 col-lg-4">
-                                <div class="menu-card">
-                                    <div class="menu-card-img">
-                                        <img src="https://res.cloudinary.com/dyg0knk2o/image/upload/v1742753477/_Arepa_MIXTA_vwg9rd.jpg" alt="Arepa Chicken">
-                                    </div>
-                                    <div class="menu-card-body">
-                                        <h5 class="menu-card-name">Chicken</h5>
-                                        <p class="menu-card-desc">½ lb de pollo a la parrilla.</p>
-                                        <span class="menu-card-price">$13.49</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-6 col-lg-4">
-                                <div class="menu-card">
-                                    <div class="menu-card-img">
-                                        <img src="https://res.cloudinary.com/dyg0knk2o/image/upload/v1742753583/_Arepa_Chicharron_knbkbm.jpg" alt="Arepa Chicharron">
-                                    </div>
-                                    <div class="menu-card-body">
-                                        <h5 class="menu-card-name">Chicharron (Pork)</h5>
-                                        <p class="menu-card-desc">½ lb de chicharrón crujiente.</p>
-                                        <span class="menu-card-price">$12.99</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-6 col-lg-4">
-                                <div class="menu-card">
-                                    <div class="menu-card-no-img">
-                                        <i class="bi bi-fire"></i>
-                                    </div>
-                                    <div class="menu-card-body">
-                                        <h5 class="menu-card-name">Chorizo Arepa</h5>
-                                        <p class="menu-card-desc">Chorizo a la parrilla con pico de gallo y queso.</p>
-                                        <span class="menu-card-price">$14.49</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-6 col-lg-4">
-                                <div class="menu-card">
-                                    <div class="menu-card-no-img">
-                                        <i class="bi bi-circle"></i>
-                                    </div>
-                                    <div class="menu-card-body">
-                                        <h5 class="menu-card-name">Grilled Cheese Arepa</h5>
-                                        <p class="menu-card-desc">Solo queso a la plancha, pico de gallo y salsa especial.</p>
-                                        <span class="menu-card-price">$11.99</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- CACHAPAS -->
-                    <div class="tab-pane fade" id="pane-cachapas" role="tabpanel">
-                        <p class="menu-card-desc mb-4" style="color:rgba(255,255,255,0.5); font-size:0.9rem;">
-                            Cachapa venezolana — panqueque de maíz relleno de queso. Puedes añadir extras: Queso +$4.00 · Beef +$7.99 · Pollo +$4.99 · Chorizo +$4.99 · Chicharron +$4.99
-                        </p>
-                        <div class="row g-4">
-                            <div class="col-6 col-lg-4">
-                                <div class="menu-card">
-                                    <div class="menu-card-img">
-                                        <img src="https://res.cloudinary.com/dyg0knk2o/image/upload/v1742323286/VDR52247_fcxrwo.jpg" alt="Cachapa con Queso">
-                                    </div>
-                                    <div class="menu-card-body">
-                                        <h5 class="menu-card-name">Cachapa con Queso</h5>
-                                        <p class="menu-card-desc">Cachapa rellena de queso blanco.</p>
-                                        <span class="menu-card-price">$13.99</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-6 col-lg-4">
-                                <div class="menu-card">
-                                    <div class="menu-card-img">
-                                        <img src="https://res.cloudinary.com/dyg0knk2o/image/upload/v1742323285/VDR52237_schtv3.jpg" alt="Cachapa con Pollo">
-                                    </div>
-                                    <div class="menu-card-body">
-                                        <h5 class="menu-card-name">Cachapa con Pollo</h5>
-                                        <p class="menu-card-desc">Cachapa rellena de queso + pollo a la parrilla.</p>
-                                        <span class="menu-card-price">$17.98</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-6 col-lg-4">
-                                <div class="menu-card">
-                                    <div class="menu-card-img">
-                                        <img src="https://res.cloudinary.com/dyg0knk2o/image/upload/v1742753933/Cachapa_con_Picana_vbz2ho.jpg" alt="Cachapa con Picaña">
-                                    </div>
-                                    <div class="menu-card-body">
-                                        <h5 class="menu-card-name">Cachapa con Picaña</h5>
-                                        <p class="menu-card-desc">Cachapa rellena de queso + picaña o churrasco.</p>
-                                        <span class="menu-card-price">$19.98</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-6 col-lg-4">
-                                <div class="menu-card">
-                                    <div class="menu-card-img">
-                                        <img src="https://res.cloudinary.com/dyg0knk2o/image/upload/v1742753847/Cachapa_con_chicharron_uu8uar.jpg" alt="Cachapa con Chicharron">
-                                    </div>
-                                    <div class="menu-card-body">
-                                        <h5 class="menu-card-name">Cachapa con Chicharron</h5>
-                                        <p class="menu-card-desc">Cachapa rellena de queso + chicharrón crujiente.</p>
-                                        <span class="menu-card-price">$17.98</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- ACOMPAÑANTES (SIDES) -->
-                    <div class="tab-pane fade" id="pane-sides" role="tabpanel">
-                        <div class="row g-4">
-                            <div class="col-6 col-lg-4">
-                                <div class="menu-card">
-                                    <div class="menu-card-no-img"><i class="bi bi-fire"></i></div>
-                                    <div class="menu-card-body">
-                                        <h5 class="menu-card-name">1 Pieza de Chorizo</h5>
-                                        <p class="menu-card-desc">Chorizo a la parrilla.</p>
-                                        <span class="menu-card-price">$4.99</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-6 col-lg-4">
-                                <div class="menu-card">
-                                    <div class="menu-card-no-img"><i class="bi bi-circle"></i></div>
-                                    <div class="menu-card-body">
-                                        <h5 class="menu-card-name">4 Mini Arepitas</h5>
-                                        <p class="menu-card-desc">Mini arepitas fritas.</p>
-                                        <span class="menu-card-price">$3.49</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-6 col-lg-4">
-                                <div class="menu-card">
-                                    <div class="menu-card-no-img"><i class="bi bi-grid"></i></div>
-                                    <div class="menu-card-body">
-                                        <h5 class="menu-card-name">1 Pieza de Queso a la Plancha</h5>
-                                        <p class="menu-card-desc">Queso blanco a la plancha.</p>
-                                        <span class="menu-card-price">$4.99</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-6 col-lg-4">
-                                <div class="menu-card">
-                                    <div class="menu-card-no-img"><i class="bi bi-egg-fried"></i></div>
-                                    <div class="menu-card-body">
-                                        <h5 class="menu-card-name">French Fries (Side)</h5>
-                                        <p class="menu-card-desc">Papas fritas crujientes.</p>
-                                        <span class="menu-card-price">$3.49</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-6 col-lg-4">
-                                <div class="menu-card">
-                                    <div class="menu-card-no-img"><i class="bi bi-basket"></i></div>
-                                    <div class="menu-card-body">
-                                        <h5 class="menu-card-name">Yuca Frita</h5>
-                                        <p class="menu-card-desc">Yuca frita crujiente.</p>
-                                        <span class="menu-card-price">$4.99</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-6 col-lg-4">
-                                <div class="menu-card">
-                                    <div class="menu-card-no-img"><i class="bi bi-basket"></i></div>
-                                    <div class="menu-card-body">
-                                        <h5 class="menu-card-name">Plantain (Maduros)</h5>
-                                        <p class="menu-card-desc">Plátanos maduros fritos.</p>
-                                        <span class="menu-card-price">$4.99</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-6 col-lg-4">
-                                <div class="menu-card">
-                                    <div class="menu-card-no-img"><i class="bi bi-basket"></i></div>
-                                    <div class="menu-card-body">
-                                        <h5 class="menu-card-name">Tostones</h5>
-                                        <p class="menu-card-desc">Plátano verde frito y aplastado.</p>
-                                        <span class="menu-card-price">$4.99</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-6 col-lg-4">
-                                <div class="menu-card">
-                                    <div class="menu-card-no-img"><i class="bi bi-basket"></i></div>
-                                    <div class="menu-card-body">
-                                        <h5 class="menu-card-name">Pico de Gallo</h5>
-                                        <p class="menu-card-desc">Tomate, cebolla, cilantro y limón.</p>
-                                        <span class="menu-card-price">$4.99</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-6 col-lg-4">
-                                <div class="menu-card">
-                                    <div class="menu-card-no-img"><i class="bi bi-basket"></i></div>
-                                    <div class="menu-card-body">
-                                        <h5 class="menu-card-name">White Rice (Arroz Blanco)</h5>
-                                        <p class="menu-card-desc">Arroz blanco al vapor.</p>
-                                        <span class="menu-card-price">$4.99</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- BEBIDAS -->
-                    <div class="tab-pane fade" id="pane-drinks" role="tabpanel">
-                        <div class="row g-4">
-                            <div class="col-6 col-lg-3">
-                                <div class="menu-card">
-                                    <div class="menu-card-no-img"><i class="bi bi-cup-straw"></i></div>
-                                    <div class="menu-card-body">
-                                        <h5 class="menu-card-name">Frescolita</h5>
-                                        <p class="menu-card-desc"></p>
-                                        <span class="menu-card-price">$2.99</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-6 col-lg-3">
-                                <div class="menu-card">
-                                    <div class="menu-card-no-img"><i class="bi bi-cup-straw"></i></div>
-                                    <div class="menu-card-body">
-                                        <h5 class="menu-card-name">Nestea</h5>
-                                        <p class="menu-card-desc"></p>
-                                        <span class="menu-card-price">$4.20</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-6 col-lg-3">
-                                <div class="menu-card">
-                                    <div class="menu-card-no-img"><i class="bi bi-cup-straw"></i></div>
-                                    <div class="menu-card-body">
-                                        <h5 class="menu-card-name">Sodas</h5>
-                                        <p class="menu-card-desc"></p>
-                                        <span class="menu-card-price">$2.80</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-6 col-lg-3">
-                                <div class="menu-card">
-                                    <div class="menu-card-no-img"><i class="bi bi-cup-straw"></i></div>
-                                    <div class="menu-card-body">
-                                        <h5 class="menu-card-name">Chicha</h5>
-                                        <p class="menu-card-desc"></p>
-                                        <span class="menu-card-price">$5.99</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-6 col-lg-3">
-                                <div class="menu-card">
-                                    <div class="menu-card-no-img"><i class="bi bi-cup-straw"></i></div>
-                                    <div class="menu-card-body">
-                                        <h5 class="menu-card-name">Water</h5>
-                                        <p class="menu-card-desc"></p>
-                                        <span class="menu-card-price">$2.50</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-6 col-lg-3">
-                                <div class="menu-card">
-                                    <div class="menu-card-no-img"><i class="bi bi-cup-straw"></i></div>
-                                    <div class="menu-card-body">
-                                        <h5 class="menu-card-name">Malta</h5>
-                                        <p class="menu-card-desc"></p>
-                                        <span class="menu-card-price">$2.80</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-6 col-lg-3">
-                                <div class="menu-card">
-                                    <div class="menu-card-no-img"><i class="bi bi-cup-straw"></i></div>
-                                    <div class="menu-card-body">
-                                        <h5 class="menu-card-name">Papelón con Limón</h5>
-                                        <p class="menu-card-desc">Bebida venezolana de panela y limón.</p>
-                                        <span class="menu-card-price">$5.99</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-6 col-lg-3">
-                                <div class="menu-card">
-                                    <div class="menu-card-no-img"><i class="bi bi-cup-straw"></i></div>
-                                    <div class="menu-card-body">
-                                        <h5 class="menu-card-name">Perrier</h5>
-                                        <p class="menu-card-desc">Agua mineral con gas.</p>
-                                        <span class="menu-card-price">$3.50</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-6 col-lg-3">
-                                <div class="menu-card">
-                                    <div class="menu-card-no-img"><i class="bi bi-cup-straw"></i></div>
-                                    <div class="menu-card-body">
-                                        <h5 class="menu-card-name">Postobon</h5>
-                                        <p class="menu-card-desc"></p>
-                                        <span class="menu-card-price">$2.80</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-6 col-lg-3">
-                                <div class="menu-card">
-                                    <div class="menu-card-no-img"><i class="bi bi-cup-straw"></i></div>
-                                    <div class="menu-card-body">
-                                        <h5 class="menu-card-name">Lemonade</h5>
-                                        <p class="menu-card-desc">Limonada fresca.</p>
-                                        <span class="menu-card-price">$3.99</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- KIDS -->
-                    <div class="tab-pane fade" id="pane-kids" role="tabpanel">
-                        <div class="row g-4">
-                            <div class="col-6 col-lg-4">
-                                <div class="menu-card">
-                                    <div class="menu-card-img">
-                                        <img src="https://res.cloudinary.com/dyg0knk2o/image/upload/v1742755313/Pollo_Kids_kvl8to.jpg" alt="Grill Chicken Kids">
-                                    </div>
-                                    <div class="menu-card-body">
-                                        <h5 class="menu-card-name">Grill Chicken</h5>
-                                        <p class="menu-card-desc">Pollo a la parrilla con papas fritas.</p>
-                                        <span class="menu-card-price">$9.99</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-6 col-lg-4">
-                                <div class="menu-card">
-                                    <div class="menu-card-img">
-                                        <img src="https://res.cloudinary.com/dyg0knk2o/image/upload/v1742755112/_Kids_burger_cfrtbc.jpg" alt="Kids Burger">
-                                    </div>
-                                    <div class="menu-card-body">
-                                        <h5 class="menu-card-name">Kids Burger</h5>
-                                        <p class="menu-card-desc">Carne, queso americano y papas fritas.</p>
-                                        <span class="menu-card-price">$10.99</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-6 col-lg-4">
-                                <div class="menu-card">
-                                    <div class="menu-card-img">
-                                        <img src="https://res.cloudinary.com/dyg0knk2o/image/upload/v1742755217/Carne_kids_zx4sls.jpg" alt="Grill Beef Kids">
-                                    </div>
-                                    <div class="menu-card-body">
-                                        <h5 class="menu-card-name">Grill Beef</h5>
-                                        <p class="menu-card-desc">Carne (Picaña o Churrasco) a la parrilla con papas fritas.</p>
-                                        <span class="menu-card-price">$12.99</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- POSTRES -->
-                    <div class="tab-pane fade" id="pane-postres" role="tabpanel">
-                        <div class="row g-4 justify-content-center">
-                            <div class="col-12 col-sm-8 col-lg-4">
-                                <div class="menu-card">
-                                    <div class="menu-card-img">
-                                        <img src="https://res.cloudinary.com/dyg0knk2o/image/upload/v1742323095/VDR52255_x0ggcb.jpg" alt="Tequeños de Nutella">
-                                    </div>
-                                    <div class="menu-card-body">
-                                        <h5 class="menu-card-name">Nutella Tequeños</h5>
-                                        <p class="menu-card-desc">Tequeños rellenos de Nutella (4 und.).</p>
-                                        <span class="menu-card-price">$8.49</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div><!-- /tab-content -->
-            </div><!-- /container -->
         </section>
 
         <!-- ====================================================
@@ -950,7 +201,7 @@
              ==================================================== -->
         <section id="contact" class="section">
             <div class="container">
-                <h2 class="section-title">Contact</h2>
+                <h2 class="section-title">Contacto</h2>
                 <div class="section-divider"></div>
 
                 <div class="row g-4 justify-content-center">
@@ -1019,7 +270,7 @@
              ==================================================== -->
         <section id="location" class="section">
             <div class="container">
-                <h2 class="section-title">Location</h2>
+                <h2 class="section-title">Ubicación</h2>
                 <div class="section-divider"></div>
 
                 <p class="location-address">
@@ -1045,10 +296,10 @@
             <div class="footer-inner">
                 <div>
                     <img src="./img/LOGO_AVILA GRILL_WHITE.png" alt="Avila Grill Miami" class="footer-logo">
-                    <p class="footer-tagline">The Authentic Grill Experience</p>
+                    <p class="footer-tagline">La auténtica experiencia a la parrilla</p>
                 </div>
                 <div class="footer-social-col">
-                    <h4>Social</h4>
+                    <h4>Redes</h4>
                     <div class="footer-social-links">
                         <a href="https://www.instagram.com/avilagrillmiami?igsh=MWowbTBtMnR3aDF1dw==" target="_blank" rel="noopener">
                             <img src="./img/instagram.png" alt="Instagram">
@@ -1062,7 +313,7 @@
                     </div>
                 </div>
             </div>
-            <p class="footer-copy">© Copyright 2025 · Made by Jose Vargas</p>
+            <p class="footer-copy">© Copyright 2025 · Hecho por Jose Vargas</p>
         </div>
     </footer>
 
