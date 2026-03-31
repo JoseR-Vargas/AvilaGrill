@@ -1468,9 +1468,9 @@ footer {
 
 .footer-inner {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
     gap: 2rem;
     padding-bottom: 1.5rem;
     border-bottom: 1px solid rgba(255, 255, 255, 0.08);
@@ -1479,9 +1479,10 @@ footer {
 }
 
 .footer-logo {
+    display: block;
     max-height: 2.8rem;
     width: auto;
-    margin-bottom: 0.5rem;
+    margin: 0 auto 0.5rem;
 }
 
 .footer-tagline {
