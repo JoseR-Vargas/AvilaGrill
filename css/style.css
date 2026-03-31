@@ -1212,60 +1212,82 @@ body.nav-open #header {
     margin-bottom: 0;
 }
 
-/* ============================================================
-   CONTACT (#contact)
-   ============================================================ */
+/* === Contacto === */
 
-#contact {
-    background-color: var(--bg);
+.ag-contact-section {
+    background: linear-gradient(180deg, var(--dark2) 0%, var(--dark) 100%);
 }
 
-#contact .section-title {
-    color: var(--dark);
+.ag-contact-section .section-title {
+    color: var(--gold);
 }
 
-#contact .section-divider {
+.ag-contact-section .section-divider {
     background-color: var(--gold);
 }
 
-.contact-card {
-    background-color: var(--white);
-    border: 1px solid rgba(0, 0, 0, 0.06);
-    border-radius: 16px;
-    padding: 2.5rem 2rem;
+.ag-contact-card {
+    position: relative;
+    background: linear-gradient(160deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.01));
+    border: 1px solid rgba(201, 160, 82, 0.18);
+    border-radius: 20px;
+    padding: 2.2rem 1.8rem;
     text-align: center;
-    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
     height: 100%;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.contact-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
-}
-
-.contact-card--phone {
     display: flex;
     flex-direction: column;
     align-items: center;
+    overflow: hidden;
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.ag-contact-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 12%;
+    right: 12%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(201, 160, 82, 0.55), transparent);
+}
+
+.ag-contact-card:hover {
+    transform: translateY(-6px);
+    border-color: rgba(201, 160, 82, 0.42);
+    box-shadow: 0 18px 42px rgba(0, 0, 0, 0.4);
+}
+
+.ag-contact-card-icon {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: rgba(201, 160, 82, 0.1);
+    border: 1px solid rgba(201, 160, 82, 0.28);
+    display: flex;
+    align-items: center;
     justify-content: center;
-}
-
-.contact-card h3 {
-    font-family: 'AGrill_display', sans-serif;
-    font-size: 1.15rem;
+    font-size: 1.4rem;
     color: var(--gold);
-    letter-spacing: 0.08em;
-    margin-bottom: 1.5rem;
-    text-transform: uppercase;
+    margin-bottom: 1.2rem;
+    flex-shrink: 0;
 }
 
-/* Hours table */
+.ag-contact-card-title {
+    font-family: 'AGrill_display', sans-serif;
+    font-size: 1rem;
+    color: var(--gold);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 1.4rem;
+}
+
+/* Hours table — adapted for dark background */
 .hours-table {
     width: 100%;
     font-family: 'AGrill_body', sans-serif;
     font-size: 0.95rem;
-    color: var(--dark);
+    color: rgba(255, 255, 255, 0.82);
     border-collapse: collapse;
     text-align: left;
 }
@@ -1275,30 +1297,30 @@ body.nav-open #header {
 }
 
 .hours-table tr:not(:last-child) td {
-    border-bottom: 1px solid rgba(0, 0, 0, 0.04);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
 }
 
 .hours-table td:last-child {
     text-align: right;
-    color: var(--green);
+    color: var(--green2);
     font-weight: bold;
 }
 
 .hours-table tr.closed td:last-child {
-    color: #c0392b;
+    color: #e57373;
 }
 
 /* Phone */
-.phone-number {
+.ag-phone-number {
     font-family: 'AGrill_display', sans-serif;
-    font-size: 1.8rem;
-    color: var(--dark);
-    margin-bottom: 1.2rem;
+    font-size: 1.9rem;
+    color: var(--white);
+    margin-bottom: 1.4rem;
     display: block;
     letter-spacing: 0.02em;
 }
 
-.phone-cta {
+.ag-phone-cta {
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
@@ -1306,51 +1328,67 @@ body.nav-open #header {
     color: var(--white);
     text-decoration: none;
     font-family: 'AGrill_body', sans-serif;
-    font-size: 1.05rem;
-    padding: 0.85rem 2.2rem;
+    font-size: 1rem;
+    padding: 0.85rem 2rem;
     border-radius: 50px;
-    box-shadow: 0 2px 8px rgba(46, 125, 50, 0.25);
+    box-shadow: 0 4px 16px rgba(46, 125, 50, 0.3);
     transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-.phone-cta:hover {
+.ag-phone-cta:hover {
     transform: translateY(-2px);
-    box-shadow: 0 4px 16px rgba(46, 125, 50, 0.35);
+    box-shadow: 0 8px 24px rgba(46, 125, 50, 0.42);
     color: var(--white);
 }
 
-/* Social links */
-.contact-social {
+/* Social list */
+.ag-social-list {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 1.5rem;
-    margin-top: 2.5rem;
-    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 0.75rem;
+    width: 100%;
 }
 
-.social-link {
+.ag-social-item {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
+    gap: 0.85rem;
     text-decoration: none;
+    color: rgba(255, 255, 255, 0.72);
     font-family: 'AGrill_body', sans-serif;
-    font-size: 0.95rem;
-    color: var(--dark);
-    transition: color 0.2s;
+    font-size: 0.92rem;
+    padding: 0.7rem 1rem;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    background: rgba(255, 255, 255, 0.03);
+    transition: color 0.22s ease, border-color 0.22s ease, background 0.22s ease, transform 0.22s ease;
 }
 
-.social-link img {
-    width: 1.8rem;
-    transition: transform 0.2s;
+.ag-social-item img {
+    width: 1.5rem;
+    flex-shrink: 0;
+    transition: transform 0.22s ease;
 }
 
-.social-link:hover {
+.ag-social-item:hover {
     color: var(--gold);
+    border-color: rgba(201, 160, 82, 0.35);
+    background: rgba(201, 160, 82, 0.06);
+    transform: translateX(4px);
 }
 
-.social-link:hover img {
-    transform: scale(1.15);
+.ag-social-item:hover img {
+    transform: scale(1.12);
+}
+
+@media (max-width: 550px) {
+    .ag-contact-card {
+        padding: 1.8rem 1.4rem;
+    }
+
+    .ag-phone-number {
+        font-size: 1.6rem;
+    }
 }
 
 /* ============================================================

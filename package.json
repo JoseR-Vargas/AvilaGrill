@@ -1,0 +1,22 @@
+{
+  "name": "avilagrill",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JoseR-Vargas/AvilaGrill.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/JoseR-Vargas/AvilaGrill/issues"
+  },
+  "homepage": "https://github.com/JoseR-Vargas/AvilaGrill#readme",
+  "devDependencies": {
+    "@types/node": "^25.5.0"
+  }
+}
