@@ -486,13 +486,24 @@ body.nav-open #header {
     height: 100vh;
     height: 100svh;
     min-height: 500px;
-    background-image: url('../img/FoodTruckAvilaGrill.JPG');
-    background-size: cover;
-    background-position: center;
+    background-color: var(--dark2);
     display: flex;
     align-items: center;
     justify-content: center;
     scroll-margin-top: 0;
+    overflow: hidden;
+}
+
+#home::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url('../img/FoodTruckAvilaGrill.JPG');
+    background-size: cover;
+    background-position: center;
+    animation: kenBurns 20s ease-in-out alternate infinite;
+    transform-origin: center center;
+    will-change: transform;
 }
 
 .hero-overlay {
@@ -1604,5 +1615,147 @@ footer {
 
     .footer-social-links {
         justify-content: center;
+    }
+}
+
+/* ============================================================
+   EFFECTS — Ken Burns, scroll reveal, hero entrance, mobile bar
+   ============================================================ */
+
+/* --- Ken Burns (hero background) --- */
+@keyframes kenBurns {
+    0%   { transform: scale(1)    translateZ(0); }
+    100% { transform: scale(1.08) translateZ(0); }
+}
+
+/* --- Hero content entrance (page load) --- */
+@keyframes heroFadeUp {
+    from { opacity: 0; transform: translateY(22px); }
+    to   { opacity: 1; transform: none; }
+}
+
+.hero-logo {
+    animation: heroFadeUp 0.8s ease both;
+    animation-delay: 0.35s;
+}
+
+.hero-tagline {
+    animation: heroFadeUp 0.8s ease both;
+    animation-delay: 0.58s;
+}
+
+.hero-cta {
+    animation: heroFadeUp 0.8s ease both;
+    animation-delay: 0.82s;
+}
+
+/* --- Scroll-triggered reveal --- */
+@keyframes revealFadeUp {
+    from { opacity: 0; transform: translateY(28px); }
+    to   { opacity: 1; transform: none; }
+}
+
+@keyframes revealFadeLeft {
+    from { opacity: 0; transform: translateX(-28px); }
+    to   { opacity: 1; transform: none; }
+}
+
+@keyframes revealFadeRight {
+    from { opacity: 0; transform: translateX(28px); }
+    to   { opacity: 1; transform: none; }
+}
+
+.reveal {
+    opacity: 0;
+}
+
+.reveal.visible {
+    animation-fill-mode: both;
+    animation-duration: 0.65s;
+    animation-timing-function: ease;
+}
+
+.reveal.fade-up.visible   { animation-name: revealFadeUp; }
+.reveal.fade-left.visible { animation-name: revealFadeLeft; }
+.reveal.fade-right.visible{ animation-name: revealFadeRight; }
+
+.reveal[data-delay="1"].visible { animation-delay: 0.12s; }
+.reveal[data-delay="2"].visible { animation-delay: 0.24s; }
+.reveal[data-delay="3"].visible { animation-delay: 0.36s; }
+
+/* --- Mobile action bar (bottom fixed) --- */
+.mobile-action-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    background: var(--dark2);
+    border-top: 1px solid rgba(201, 160, 82, 0.22);
+    z-index: 900;
+    padding-bottom: env(safe-area-inset-bottom);
+    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.45);
+}
+
+.mob-action {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0.6rem 0.25rem;
+    color: rgba(255, 255, 255, 0.62);
+    font-family: 'AGrill_body', sans-serif;
+    font-size: 0.6rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: color 0.2s ease, background-color 0.2s ease;
+    gap: 3px;
+}
+
+.mob-action i {
+    font-size: 1.22rem;
+}
+
+.mob-action:hover,
+.mob-action:focus-visible {
+    color: var(--gold);
+    background-color: rgba(201, 160, 82, 0.06);
+}
+
+/* Compensar la altura de la barra en el footer */
+@media (max-width: 767px) {
+    footer {
+        padding-bottom: calc(4.2rem + env(safe-area-inset-bottom));
+    }
+}
+
+/* Ocultar en desktop */
+@media (min-width: 768px) {
+    .mobile-action-bar {
+        display: none;
+    }
+}
+
+/* --- Reducir movimiento (accesibilidad) --- */
+@media (prefers-reduced-motion: reduce) {
+    #home::before,
+    .hero-logo,
+    .hero-tagline,
+    .hero-cta {
+        animation: none !important;
+    }
+
+    .hero-logo,
+    .hero-tagline,
+    .hero-cta {
+        opacity: 1;
+    }
+
+    .reveal,
+    .reveal.visible {
+        animation: none !important;
+        opacity: 1;
     }
 }
